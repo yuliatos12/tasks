@@ -1,6 +1,4 @@
 const containerEl = document.querySelector('.container');
-const tilesEl = containerEl.querySelectorAll('.tile');
-
 
 
 containerEl.addEventListener('click', handleClick);
@@ -8,51 +6,45 @@ containerEl.addEventListener('click', handleClick);
 
 function handleClick(event) {
 
-    const clickedTile = event.target.closest('.tile');
+const tilesEl = containerEl.querySelectorAll('.tile');
+
+const clickedTile = event.target.closest('.tile');
     
-    console.log(clickedTile);
+const clickedTileIndex = [...clickedTile.parentNode.children].indexOf(clickedTile);
 
-//     const firstTile = tilesEl[0];
-// const secondTile = tilesEl[1];
-// const thirdTile = tilesEl[2];
-const fourthTile = tilesEl[3];
-   
+const isEmpty = tilesEl[clickedTileIndex + 1].classList.contains('empty');
 
-switch (fourthTile) {
-    case clickedTile.nextElementSibling:
-        containerEl.insertBefore(fourthTile, clickedTile);
-        break; 
-     case clickedTile.nextElementSibling:
-        containerEl.insertBefore(fourthTile, clickedTile);
-        break;
-     case clickedTile.nextElementSibling:
-        containerEl.insertBefore(fourthTile, clickedTile);
-        break;      
-}
-}
+// console.log(isEmpty);
 
-const containerTwoEl = document.querySelector('.container-two');
-const tilesTwoEl = containerTwoEl.querySelectorAll('.tiles');
+if (isEmpty) {
+    containerEl.insertBefore(tilesEl[clickedTileIndex + 1], tilesEl[clickedTileIndex]);
+  }
 
-containerTwoEl.addEventListener('click', handleTwoClick);
+const isEmptyBackwards = tilesEl[clickedTileIndex - 1].classList.contains('empty');
+// console.log(isEmptyBackwards);
 
-function handleTwoClick(event) {
-
-const clickedTiles = event.target.closest('.tiles');
+  if (isEmptyBackwards) {
+    containerEl.insertBefore(tilesEl[clickedTileIndex], tilesEl[clickedTileIndex - 1]);
     
-
-const one = tilesTwoEl[0];
-const two = tilesTwoEl[1];
-const three = tilesTwoEl[2];
-const four = tilesTwoEl[3];
-const five = tilesTwoEl[4];
-const six = tilesTwoEl[5];
-const seven = tilesTwoEl[6];
-const eight = tilesTwoEl[7];
-   
-
+  }
 
 }
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
 
 
 
