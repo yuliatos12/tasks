@@ -31,6 +31,32 @@ switch (fourthTile) {
 }
 }
 
+const containerTwoEl = document.querySelector('.container-two');
+const tilesTwoEl = containerTwoEl.querySelectorAll('.tiles');
+
+containerTwoEl.addEventListener('click', handleTwoClick);
+
+function handleTwoClick(event) {
+
+const clickedTiles = event.target.closest('.tiles');
+    
+
+const one = tilesTwoEl[0];
+const two = tilesTwoEl[1];
+const three = tilesTwoEl[2];
+const four = tilesTwoEl[3];
+const five = tilesTwoEl[4];
+const six = tilesTwoEl[5];
+const seven = tilesTwoEl[6];
+const eight = tilesTwoEl[7];
+   
+
+
+}
+
+
+
+
 
 
 
