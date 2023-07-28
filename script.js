@@ -11,8 +11,9 @@ const tilesEl = containerEl.querySelectorAll('.tile');
 const clickedTile = event.target.closest('.tile');
     
 const clickedTileIndex = [...clickedTile.parentNode.children].indexOf(clickedTile);
-// console.log(clickedTileIndex);
-const isEmpty = tilesEl[clickedTileIndex + 1].classList.contains('empty');
+console.log(clickedTileIndex);
+// const isEmpty = tilesEl[clickedTileIndex + 1].classList.contains('empty');
+const isEmpty = clickedTileIndex + 1 < tilesEl.length ? tilesEl[clickedTileIndex + 1].classList.contains('empty') : false;
 
 // console.log(isEmpty);
 
