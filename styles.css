@@ -4,6 +4,8 @@
     border: 1px solid black;
     display: flex;
     margin-bottom: 50px ;
+    display: flex;
+    flex-wrap: wrap;
 }
 .tile {
     width: 50px;
