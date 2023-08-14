@@ -36,6 +36,8 @@
     text-align: center;
     cursor: pointer; 
 }
-
+.empty {
+    background-color: transparent;
+}
 
 
