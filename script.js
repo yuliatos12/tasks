@@ -11,24 +11,18 @@ const isEmptyIndex = nodes.indexOf(empty);
 console.log(isEmptyIndex);
 
 
-
 if(isEmptyIndex - clickedTileIndex == 1) {
   containerEl.insertBefore(tilesEl[clickedTileIndex + 1], tilesEl[clickedTileIndex]);
-}
 
-if(clickedTileIndex - isEmptyIndex == 1) {
+} else if (clickedTileIndex - isEmptyIndex == 1) {
   containerEl.insertBefore(tilesEl[clickedTileIndex], tilesEl[clickedTileIndex - 1]);
-}
 
-if (isEmptyIndex - clickedTileIndex == 4) {
+} else if (isEmptyIndex - clickedTileIndex == 4) {
   containerEl.insertBefore(tilesEl[clickedTileIndex + 4], tilesEl[clickedTileIndex]);
-}
 
-if(clickedTileIndex - isEmptyIndex == 4) {
+} else if (clickedTileIndex - isEmptyIndex == 4) {
   containerEl.insertBefore(tilesEl[clickedTileIndex], tilesEl[clickedTileIndex - 4]);
 }
-
-
 
 
 
