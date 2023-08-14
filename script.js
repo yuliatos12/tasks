@@ -5,28 +5,28 @@ const tilesEl = containerEl.querySelectorAll('.tile');
 const clickedTile = event.target.closest('.tile');  
 const clickedTileIndex = [...clickedTile.parentNode.children].indexOf(clickedTile);
 // console.log(clickedTileIndex);
+const nodes = Array.prototype.slice.call(containerEl.children);
+const empty = document.getElementsByClassName('empty')[0];
+const isEmptyIndex = nodes.indexOf(empty);
+console.log(isEmptyIndex);
 
 
-//const isEmpty = tilesEl[clickedTileIndex + 1].classList.contains('empty');
-
-const isEmptyIndex = clickedTileIndex + 1;
 
 if(isEmptyIndex - clickedTileIndex == 1) {
   containerEl.insertBefore(tilesEl[clickedTileIndex + 1], tilesEl[clickedTileIndex]);
 }
 
-const isEmptyIndexBackwards = clickedTileIndex - 1;
-if(isEmptyIndexBackwards - clickedTileIndex == 1) {
+if(clickedTileIndex - isEmptyIndex == 1) {
   containerEl.insertBefore(tilesEl[clickedTileIndex], tilesEl[clickedTileIndex - 1]);
 }
 
-// const isEmptyIndexBelow = clickedTileIndex + 4;
+if (isEmptyIndex - clickedTileIndex == 4) {
+  containerEl.insertBefore(tilesEl[clickedTileIndex + 4], tilesEl[clickedTileIndex]);
+}
 
-// const isEmpty = clickedTileIndex + 1 < tilesEl.length ? tilesEl[clickedTileIndex + 1].classList.contains('empty') : false;
-// console.log(isEmpty);
-
-// const isEmptyIndex = clickedTileIndex + 1;
-// console.log(isEmptyIndex);
+if(clickedTileIndex - isEmptyIndex == 4) {
+  containerEl.insertBefore(tilesEl[clickedTileIndex], tilesEl[clickedTileIndex - 4]);
+}
 
 
 
