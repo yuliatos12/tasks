@@ -1,5 +1,17 @@
 const containerEl = document.querySelector('.container');
 containerEl.addEventListener('click', handleClick);
+const btnEl = document.querySelector('.btn');
+btnEl.addEventListener('click', handleSuffle);
+
+function handleSuffle() {
+  const tilesEl = containerEl.querySelectorAll('.tile');
+  const tilesArray = Array.from(tilesEl);
+  for (let i = tilesArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [tilesArray[i], tilesArray[j]] = [tilesArray[j], tilesArray[i]];
+  }
+  tilesArray.forEach(tile => containerEl.appendChild(tile));
+}
 
 function handleClick(event) {
 const tilesEl = containerEl.querySelectorAll('.tile');
@@ -11,8 +23,6 @@ const isEmptyIndex = nodes.indexOf(empty);
 console.log(isEmptyIndex);
 
 // const isEven = clickedTileIndex % 4 === 0;
-
-
 
 if(isEmptyIndex - clickedTileIndex == 1 && (clickedTileIndex % 4  !== 3)) {
   containerEl.insertBefore(tilesEl[isEmptyIndex], tilesEl[clickedTileIndex]);
