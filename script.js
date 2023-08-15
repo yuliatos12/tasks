@@ -10,19 +10,25 @@ const empty = document.getElementsByClassName('empty')[0];
 const isEmptyIndex = nodes.indexOf(empty);
 console.log(isEmptyIndex);
 
+const isEven = clickedTileIndex % 2 === 0;
 
 
-if(isEmptyIndex - clickedTileIndex == 1 ) {
+if(isEmptyIndex - clickedTileIndex == 1 && (isEven)) {
   containerEl.insertBefore(tilesEl[isEmptyIndex], tilesEl[clickedTileIndex]);
 
-} else if (clickedTileIndex - isEmptyIndex == 1 ) {
+} else if (clickedTileIndex - isEmptyIndex == 1 && !(isEven)) {
   containerEl.insertBefore(tilesEl[clickedTileIndex], tilesEl[isEmptyIndex]);
 
-}  else if ((isEmptyIndex - clickedTileIndex == 4 || clickedTileIndex - isEmptyIndex == 4) && !(clickedTileIndex - isEmptyIndex == 1 || isEmptyIndex - clickedTileIndex == 1)) {
+}  else if (isEmptyIndex - clickedTileIndex == 4) {
     containerEl.insertBefore(tilesEl[clickedTileIndex], tilesEl[isEmptyIndex]);
     containerEl.insertBefore(tilesEl[isEmptyIndex], tilesEl[clickedTileIndex + 1]);
- 
+
+} else if (clickedTileIndex - isEmptyIndex == 4) {
+containerEl.insertBefore(tilesEl[clickedTileIndex], tilesEl[isEmptyIndex]);
+    containerEl.insertBefore(tilesEl[isEmptyIndex], tilesEl[clickedTileIndex + 1]);
 }
+
+
 }
 
 
