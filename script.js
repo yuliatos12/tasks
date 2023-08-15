@@ -10,13 +10,14 @@ const empty = document.getElementsByClassName('empty')[0];
 const isEmptyIndex = nodes.indexOf(empty);
 console.log(isEmptyIndex);
 
-const isEven = clickedTileIndex % 2 === 0;
+// const isEven = clickedTileIndex % 4 === 0;
 
 
-if(isEmptyIndex - clickedTileIndex == 1 && (isEven)) {
+
+if(isEmptyIndex - clickedTileIndex == 1 && (clickedTileIndex % 4  !== 3)) {
   containerEl.insertBefore(tilesEl[isEmptyIndex], tilesEl[clickedTileIndex]);
 
-} else if (clickedTileIndex - isEmptyIndex == 1 && !(isEven)) {
+} else if (clickedTileIndex - isEmptyIndex == 1 && (isEmptyIndex % 4  !== 3)) {
   containerEl.insertBefore(tilesEl[clickedTileIndex], tilesEl[isEmptyIndex]);
 
 }  else if (isEmptyIndex - clickedTileIndex == 4) {
