@@ -38,7 +38,23 @@ if(isEmptyIndex - clickedTileIndex == 1 && (clickedTileIndex % 4  !== 3)) {
 containerEl.insertBefore(tilesEl[clickedTileIndex], tilesEl[isEmptyIndex]);
     containerEl.insertBefore(tilesEl[isEmptyIndex], tilesEl[clickedTileIndex + 1]);
 }
+if (winningCheck()) {
+  const finishMessage = document.createElement('p');
+    finishMessage.textContent = 'Congratulations!';
+    containerEl.after(finishMessage);
+}
+}
 
+let initialArray = Array.from(containerEl.querySelectorAll('.tile'));
+function winningCheck() {
+  const currentArray = Array.from(containerEl.querySelectorAll('.tile'));
+  
+  for (let i = 0; i < initialArray.length; i++) {
+    if (initialArray[i] !== currentArray[i]) {
+      return false; 
+    }
+  }
+  return true;
 
 }
 
