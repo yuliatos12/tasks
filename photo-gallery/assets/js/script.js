@@ -39,8 +39,8 @@ $(document).ready(function () {
     });
   });
   const firstPhotoCaption = $('.gallery_thumbnails a').first().attr('title');
-  var firstPhotoFullsize = $('.gallery_thumbnails a').first().attr('href');
-  var firstPhotoPreview = firstPhotoFullsize.replace("_fullsize", "_preview");
+  const firstPhotoFullsize = $('.gallery_thumbnails a').first().attr('href');
+  const firstPhotoPreview = firstPhotoFullsize.replace("_fullsize", "_preview");
   $(".gallery_preview").html(
     '<a data-fancybox="gallery" class="overlayLink" data-caption="'+firstPhotoCaption+'" title="' +
     firstPhotoCaption +
