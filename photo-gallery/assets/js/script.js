@@ -23,7 +23,7 @@ $(document).ready(function () {
         );
         $('.gallery_preview').fadeIn(500);
         $('.gallery_caption').html(
-          '<p><a data-fancybox="gallery" class="overlaylink" title="' +
+          '<p><a data-fancybox="gallery" class="overlaylink" data-caption="'+photoCaption+'" title="' +
             photoCaption +
             '" href="' +
             photoFullSize +
@@ -42,7 +42,7 @@ $(document).ready(function () {
   var firstPhotoFullsize = $('.gallery_thumbnails a').first().attr('href');
   var firstPhotoPreview = firstPhotoFullsize.replace("_fullsize", "_preview");
   $(".gallery_preview").html(
-    '<a data-fancybox="gallery" class="overlayLink" title="' +
+    '<a data-fancybox="gallery" class="overlayLink" data-caption="'+firstPhotoCaption+'" title="' +
     firstPhotoCaption +
       '" href="' +
       firstPhotoFullsize +
@@ -51,7 +51,7 @@ $(document).ready(function () {
       ');"></a>'
   );
   $(".gallery_caption").html(
-    '<p><a data-fancybox="gallery" class="overlayLink" title="' +
+    '<p><a data-fancybox="gallery" class="overlayLink" data-caption="'+firstPhotoCaption+'" title="' +
     firstPhotoCaption +
       '" href="' +
       firstPhotoFullsize +
