@@ -90,3 +90,6 @@ function updateThumbnails() {
     }
   });
 }
+Fancybox.bind('[data-fancybox="gallery"]', {
+          
+});
