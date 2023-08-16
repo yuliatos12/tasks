@@ -11,6 +11,9 @@ function handleSuffle() {
     [tilesArray[i], tilesArray[j]] = [tilesArray[j], tilesArray[i]];
   }
   tilesArray.forEach(tile => containerEl.appendChild(tile));
+
+  const finishMessage = containerEl.nextElementSibling;
+  finishMessage.remove();
 }
 
 function handleClick(event) {
@@ -21,8 +24,6 @@ const nodes = Array.prototype.slice.call(containerEl.children);
 const empty = document.getElementsByClassName('empty')[0];
 const isEmptyIndex = nodes.indexOf(empty);
 console.log(isEmptyIndex);
-
-// const isEven = clickedTileIndex % 4 === 0;
 
 if(isEmptyIndex - clickedTileIndex == 1 && (clickedTileIndex % 4  !== 3)) {
   containerEl.insertBefore(tilesEl[isEmptyIndex], tilesEl[clickedTileIndex]);
@@ -38,10 +39,16 @@ if(isEmptyIndex - clickedTileIndex == 1 && (clickedTileIndex % 4  !== 3)) {
 containerEl.insertBefore(tilesEl[clickedTileIndex], tilesEl[isEmptyIndex]);
     containerEl.insertBefore(tilesEl[isEmptyIndex], tilesEl[clickedTileIndex + 1]);
 }
+ 
 if (winningCheck()) {
-  const finishMessage = document.createElement('p');
-    finishMessage.textContent = 'Congratulations!';
+ const finishMessage = document.createElement('p');
+    finishMessage.textContent = 'Congratulations!🎊✨🎈';
     containerEl.after(finishMessage);
+    return;
+}
+if (handleClick) {
+  const finishMessage = containerEl.nextElementSibling;
+  finishMessage.remove();
 }
 }
 
@@ -57,6 +64,13 @@ function winningCheck() {
   return true;
 
 }
+
+
+
+
+
+
+
 
 
 

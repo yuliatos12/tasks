@@ -5,7 +5,6 @@
     background-color: palegoldenrod;
     border-radius: 4px;
     display: flex;
-    margin-bottom: 50px ;
     display: flex;
     flex-wrap: wrap;
 }
@@ -38,6 +37,11 @@
     background-color: plum;
     color: aliceblue;
     border: 1px palegoldenrod solid;
+}
+p {
+   font-size: 25px; 
+   color: goldenrod;
+  margin-top: 15px;
 }
 
 
