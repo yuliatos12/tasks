@@ -122,5 +122,5 @@ a:hover {
 }
 .fancybox__thumbs.is-horizontal {
     padding: 0 var(--f-thumb-gap);
-    
+    display: none;
 }
