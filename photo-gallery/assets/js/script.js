@@ -91,6 +91,7 @@ function updateThumbnails() {
   });
 }
 Fancybox.bind('[data-fancybox="gallery"]', {
-   
-          
+  Carousel: {
+    Navigation: false,
+  },    
 });
