@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <link rel="stylesheet" href="./assets/css/tooltip.css"/>
+</head>
+<body>
+<div class="page">
+    <header>
+        <a class="logo tooltip" data-tip-type="text" data-tip-source="This is the logo" href="#"></a>
+    </header>
+    <article>
+        <h1>Heading</h1>
+        <aside>
+            <h2>Aside Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur <a class="tooltip" data-tip-type="html"
+                                                         data-tip-source="tooltip-sidebar" href="#">HTML-based
+                tooltip</a> adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam.</p>
+        </aside>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <a class="tooltip"
+                                                                                        data-tip-type="text"
+                                                                                        data-tip-source="This is the text for tooltip."
+                                                                                        href="#">text-based tooltip</a>
+            laboris nisi ut aliquip consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.</p>
+        <div class="clear-all"></div>
+    </article>
+    <footer>Your company name.</footer>
+    <div id="tooltip_container">dfgsdf</div>
+    <div class="tooltip-source-html">
+        <div id="tooltip-sidebar">
+            <img src="./assets/img/lynda.gif" style="float:left;">
+            This is a tip that has <strong><em style="color:#ffe19a;">HTML-formatted</em></strong> content, including an
+            image.
+            <div class="clear-all"></div>
+        </div>
+    </div>
+</div>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+></script>
+<script src="./assets/script/tooltip.js"></script>
+</body>
+</html>
