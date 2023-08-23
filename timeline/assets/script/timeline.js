@@ -40,15 +40,3 @@ function activateNav() {
     });
 }
 
-// function checkWindowSize() {
-//     let newTimelineWidth = $('.timeline').width();
-//         if( newTimelineWidth > 500 && timelineWidth < 500) {
-//             firstRun = true;
-//         }
-//     timelineWidth = newTimelineWidth;
-//
-//     if( firstRun == true){
-//         $('.timeline nav a:nth-child('+(currentPanel + 1)+')').trigger('click');
-//         firstRun = false
-//     }
-// }
