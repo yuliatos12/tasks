@@ -10,7 +10,7 @@ $(document).ready(function () {
     totalPanels = $('.timeline .panel').length;
 
     adjustLayout();
-    setInterval(checkWindowSize, 1000);
+
 });
 
 function adjustLayout() {
